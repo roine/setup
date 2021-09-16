@@ -1,0 +1,31 @@
+tap "aws/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "autoconf"
+brew "automake"
+brew "readline"
+brew "python@3.9"
+brew "aws-elasticbeanstalk"
+brew "coreutils", link: false
+brew "libyaml"
+brew "docker-compose", link: false
+brew "fzf"
+brew "libtool"
+brew "pkg-config"
+brew "guile"
+brew "gnutls"
+brew "gnupg", link: false
+brew "jq"
+brew "nano"
+brew "node", link: false
+brew "nvm"
+brew "postgresql"
+brew "tldr", link: false
+brew "tree"
+brew "truncate"
+brew "yarn"
+brew "zlib"
+brew "zsh"
+brew "aws/tap/aws-sam-cli"
