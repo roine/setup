@@ -16,3 +16,6 @@ echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
 # Correct paths (so, we handle all with $PATH)
 sudo truncate -s 0 /etc/paths
+
+# todo
+# add intellij/webstorm config
