@@ -26,8 +26,8 @@ Optionally you can run with --only or --skip flags.
 ```bash
 ./install --only git
 # only installs git
-./install --skip git
-# install all but git
+./install --skip git,zsh
+# install all but git and zsh
 ```
 
 # Manual
@@ -42,6 +42,10 @@ Some things need to be imported manually:
 -   [ ] Auto export Dotfiles
 -   [ ] Auto export editors config
 -   [ ] Auto export/import iTerm profile and config
+-   [ ] Show valid values for skip and ignore if nothing passed
+
+# Complete
+
 -   [x] Export vimrc
 -   [x] Export zshrc
 -   [x] Support selective install
