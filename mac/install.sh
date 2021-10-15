@@ -1,7 +1,10 @@
 #! /bin/sh
 
 # Install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! command -v brew &> /dev/null
+then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 # All apps (This line is 2 times because there are dependencies between brew cask and brew)
 brew bundle --file="$DOTFILES_PATH/mac/brew/Brewfile"
