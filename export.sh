@@ -8,7 +8,7 @@ echo ""
 echo "👇 Export dotfiles 👇"
 echo ""
 cp ~/.zshrc $DOTFILES_PATH/zsh/.zshrc
-cp ~/.p10k $DOTFILES_PATH/zsh/.p10k
+cp ~/.p10k.zsh $DOTFILES_PATH/zsh/.p10k.zsh
 cp ~/.oh-my-zsh/custom/aliases.zsh $DOTFILES_PATH/zsh/aliases.zsh
 cp ~/.gitconfig $DOTFILES_PATH/git/.gitconfig
 cp ~/.gitignore_global $DOTFILES_PATH/git/.gitignore_global
