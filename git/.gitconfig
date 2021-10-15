@@ -2,6 +2,7 @@
 	name = Jonathan de Montalembert
 	email = jonathan@demontalembert.com
 
+# remove if not macos
 [credential]
 	helper = osxkeychain
 
