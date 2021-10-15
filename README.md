@@ -43,6 +43,8 @@ Some things need to be imported manually:
 -   [ ] Auto export editors config
 -   [ ] Auto export/import iTerm profile and config
 -   [ ] Show valid values for skip and ignore if nothing passed
+-   [ ] Have a file to keep a state (remember what was already installed)
+-   [ ] Check if file exist and ask if overwrite
 
 # Complete
 

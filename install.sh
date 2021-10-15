@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+#!/bin/zsh
 
 CURRENT_FILE_PATH="$(pwd)/$(dirname $0)"
 export DOTFILES_PATH=${CURRENT_FILE_PATH%"/."}
@@ -87,10 +86,13 @@ if [[ "$MAC_ENABLED" == true ]]; then
 
     sh "$MAC_INSTALLER"
 fi
+
 echo "👇 Adding dotfiles 👇"
 echo ""
 
 if [[ "$GIT_ENABLED" == true ]]; then
+    echo "👇 Enhancing GIT 👇"  
+    echo ""
     ln -s -i "$DOTFILES_PATH/git/.gitconfig" "$HOME/.gitconfig"
     ln -s -i "$DOTFILES_PATH/git/.gitignore_global" "$HOME/.gitignore_global"
 fi
@@ -109,6 +111,8 @@ if [[ "$ZSHRC_ENABLED" == true ]]; then
 fi
 
 if [[ "$VIMRC_ENABLED" == true ]]; then
+    echo "👇 Enhancing VIM 👇"  
+    echo ""
     ln -s -i "$DOTFILES_PATH/.vimrc" "$HOME/.vimrc"
 fi
 
