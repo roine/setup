@@ -13,6 +13,8 @@ if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
     echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 fi
 
+echo "Copying zsh dotfiles 👇"
+
 # Copy configs
 ln -s -i "$DOTFILES_PATH/zsh/.zshrc" "$HOME/.zshrc"
 ln -s -i "$DOTFILES_PATH/zsh/aliases.zsh" "$HOME/.oh-my-zsh/custom/aliases.zsh"

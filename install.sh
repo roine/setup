@@ -78,7 +78,7 @@ echo "👉 dotfiles path: '$DOTFILES_PATH'"
 if [[ "$MAC_ENABLED" == true ]]; then
     OPERATIVE_SYSTEM="MacOS "
     MAC_INSTALLER="$DOTFILES_PATH/mac/install.sh"
-
+    echo ${(l:$COLUMNS::-:)}
     echo "👉 OS: $OPERATIVE_SYSTEM"
     echo ""
     echo "👇 Installing $OPERATIVE_SYSTEM custom packages 👇"
@@ -87,10 +87,8 @@ if [[ "$MAC_ENABLED" == true ]]; then
     sh "$MAC_INSTALLER"
 fi
 
-echo "👇 Adding dotfiles 👇"
-echo ""
-
 if [[ "$GIT_ENABLED" == true ]]; then
+    echo ${(l:$COLUMNS::-:)}
     echo "👇 Enhancing GIT 👇"  
     echo ""
     ln -s -i "$DOTFILES_PATH/git/.gitconfig" "$HOME/.gitconfig"
@@ -100,6 +98,7 @@ fi
 if [[ "$ZSHRC_ENABLED" == true ]]; then
     if command -v zsh &> /dev/null
     then
+        echo ${(l:$COLUMNS::-:)}
         echo "👇 Enhancing zsh 👇"
         echo ""
 
@@ -111,6 +110,7 @@ if [[ "$ZSHRC_ENABLED" == true ]]; then
 fi
 
 if [[ "$VIMRC_ENABLED" == true ]]; then
+    echo ${(l:$COLUMNS::-:)}
     echo "👇 Enhancing VIM 👇"  
     echo ""
     ln -s -i "$DOTFILES_PATH/.vimrc" "$HOME/.vimrc"
