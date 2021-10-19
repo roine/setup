@@ -91,7 +91,9 @@ if [[ "$GIT_ENABLED" == true ]]; then
     echo ${(l:$COLUMNS::-:)}
     echo "👇 Enhancing GIT 👇"  
     echo ""
+    mv $HOME/.gitconfig $HOME/.zsh/.gitconfig.old
     ln -s -i "$DOTFILES_PATH/git/.gitconfig" "$HOME/.gitconfig"
+    mv $HOME/.gitignore_global $HOME/.gitignore_global.old
     ln -s -i "$DOTFILES_PATH/git/.gitignore_global" "$HOME/.gitignore_global"
 fi
 
@@ -113,6 +115,7 @@ if [[ "$VIMRC_ENABLED" == true ]]; then
     echo ${(l:$COLUMNS::-:)}
     echo "👇 Enhancing VIM 👇"  
     echo ""
+    mv $HOME/.vimrc $HOME/.vimrc.old
     ln -s -i "$DOTFILES_PATH/.vimrc" "$HOME/.vimrc"
 fi
 
