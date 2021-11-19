@@ -1,6 +1,7 @@
 [user]
 name = Jonathan de Montalembert
 email = jonathan@demontalembert.com
+	signingkey = 9D90DC20
 
 # remove if not macos
 [credential]
