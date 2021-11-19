@@ -1,83 +1,84 @@
 [user]
-	name = Jonathan de Montalembert
-	email = jonathan@demontalembert.com
+name = Jonathan de Montalembert
+email = jonathan@demontalembert.com
 
 # remove if not macos
 [credential]
-	helper = osxkeychain
+helper = osxkeychain
 
 [core]
-	excludesfile = ~/.gitignore_global
+excludesfile = ~/.gitignore_global
 
-	# Treat spaces before tabs and all kinds of trailing whitespace as an error
-	# [default] trailing-space: looks for spaces at the end of a line
-	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
-	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+# Treat spaces before tabs and all kinds of trailing whitespace as an error
+# [default] trailing-space: looks for spaces at the end of a line
+# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	# Make `git rebase` safer on macOS
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
+# Make `git rebase` safer on macOS
+# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+trustctime = false
 
-	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
-	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-	precomposeunicode = false
+# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+precomposeunicode = false
 
-	# Speed up commands involving untracked files such as `git status`.
-	# https://git-scm.com/docs/git-update-index#_untracked_cache
-	untrackedCache = true
+# Speed up commands involving untracked files such as `git status`.
+# https://git-scm.com/docs/git-update-index#_untracked_cache
+untrackedCache = true
 
-    autocrlf = input
+autocrlf = input
 
 [color]
-    branch          = auto
-    diff            = auto
-    interactive     = auto
-    status          = auto
+branch = auto
+diff = auto
+interactive = auto
+status = auto
 
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	alias = config --get-regexp alias
-	find = "!git ls-files | grep -i"
-	grep = grep -Ii
-	nohistory = clone --depth 1
-	# list all conflicted files
-	conflict = diff --name-only --diff-filter=U
-	# fuzzy branch checkout
-	cof = !git for-each-ref --format='%(refname:short)' refs/heads | fzf | xargs git checkout
-	# save wip in commit
-	wip = "!git add .; git commit -m WIP"
-	unwip = "!git reset --soft HEAD~1; git unstage"
-	# history summary with time ago
- 	summary = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+co = checkout
+ci = commit
+st = status
+br = branch
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+alias = config --get-regexp alias
+find = "!git ls-files | grep -i"
+grep = grep -Ii
+nohistory = clone --depth 1
+# list all conflicted files
+conflict = diff --name-only --diff-filter=U
+# fuzzy branch checkout
+cof = !git for-each-ref --format='%(refname:short)' refs/heads | fzf | xargs git checkout
+# save wip in commit
+wip = "!git add .; git commit -m WIP"
+unwip = "!git reset --soft HEAD~1; git unstage"
+fixup = "!git add .; git commit --amend --no-edit; git push -f"
+# history summary with time ago
+summary = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [rebase]
-	autosquash = true # Useful when used with fixup
+autosquash = true # Useful when used with fixup
 [push]
-	default = upstream
+default = upstream
 [branch]
-	autoSetupMerge = always
+autoSetupMerge = always
 
 [commit]
-	gpgSign = true
+gpgSign = true
 
 [help]
-	autocorrect = 1
+autocorrect = 1
 
 [apply]
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
+# Detect whitespace errors when applying a patch
+whitespace = fix
 
 [diff]
-	# Detect copies as well as renames
-	renames = copies
+# Detect copies as well as renames
+renames = copies
 
 [merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-	defaulttoupstream = true
-	conflictstyle = diff3
+# Include summaries of merged commits in newly created merge commit messages
+log = true
+defaulttoupstream = true
+conflictstyle = diff3
