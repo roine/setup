@@ -1,3 +1,16 @@
+# z smart cd
+. $(brew --prefix)/etc/profile.d/z.sh
+
+export ZSH="/Users/jon/.oh-my-zsh"
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH=/usr/local/bin:$PATH
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+
 #MANUAL CHANGES
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -7,8 +20,9 @@ export NVM_DIR="$HOME/.nvm"
 # thefuck
 eval $(thefuck --alias)
 
-# z smart cd
-. $(brew --prefix)/etc/profile.d/z.sh
+
 
 # syntax highlight for zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+
