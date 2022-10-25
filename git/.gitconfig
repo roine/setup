@@ -1,6 +1,6 @@
 [user]
 name = Jonathan de Montalembert
-email = jonathan@demontalembert.com
+email = demonj92@gmail.com
 	signingkey = 9D90DC20
 
 # remove if not macos
@@ -75,8 +75,16 @@ autocorrect = 1
 whitespace = fix
 
 [diff]
+tool = difftastic # install with brew first
 # Detect copies as well as renames
 renames = copies
+	external = difft
+
+[difftool]
+prompt = false
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
 
 [merge]
 # Include summaries of merged commits in newly created merge commit messages
