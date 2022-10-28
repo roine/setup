@@ -93,6 +93,16 @@ function search {
 	open "$url"
 }
 
+function cdp {
+  local lines
+  lines=$(ls ~/projects | fzf --filter="$1" --no-sort)
+  if [ -n "$lines" -a $(wc -l <<< "$lines") -eq 1 ]; then
+    CDPATH=".:/Users/jon/projects:/usr" cd "$lines"
+  else
+    CDPATH=".:/Users/jon/projects:/usr" cd $(ls ~/projects | fzf --query "$1")
+  fi
+}
+
 alias reload="source ~/.zshrc"
 
 # List files in current dir that dont have exec permissions
